@@ -1,38 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JG Shopify Support — Portfolio</title>
+  <meta name="description" content="Portfolio of Jerico Shopify Support — store design, SEO, automation, support, and digital marketing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f5f5;
+      --muted:#251f18;
+      --accent:#111827;
+      --glass: rgba(17,24,39,0.06);
+      --radius:12px;
+      --container:1100px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);background-image:url(/html/Images/brandi-redd-aJTiW00qqtI-unsplash.jpg);background-size:cover;background-attachment:fixed;background-position:center;color:var(--accent);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    header{backdrop-filter: blur(6px);position:sticky;top:12px;z-index:50;margin:12px auto;max-width:var(--container);padding:10px 18px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));box-shadow:0 6px 20px rgba(16,24,40,0.06);display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#111827,#374151);display:grid;place-items:center;color:white;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:var(--muted);padding:8px 10px;border-radius:8px}
+    nav a:hover{color:var(--accent);background:var(--glass)}
+    .cta{padding:10px 14px;border-radius:10px;background:var(--accent);color:#a39c9c;font-weight:700}main{max-width:var(--container);margin:36px auto;padding:0 18px}
+
+.hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center;padding:48px;border-radius:14px}
+.hero-card{background:linear-gradient(180deg, rgba(250,250,250,1), rgba(247,247,247,1));padding:36px;border-radius:14px;box-shadow:0 10px 30px rgba(16,24,40,0.04)}
+h1{font-size:28px;margin:0 0 10px}
+p.lead{color:var(--muted);margin:0 0 20px}
+.meta{display:flex;gap:12px;flex-wrap:wrap}
+.chip{padding:8px 12px;border-radius:999px;background:var(--glass);font-weight:600;color:var(--muted)}
+
+/* Portfolio grid */
+.portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:white;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(16,24,40,0.04);min-height:160px;display:flex;flex-direction:column}
+.card .thumb{height:96px;border-radius:8px;background:linear-gradient(135deg,#eef2ff,#fce7f3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+.card h3{margin:12px 0 6px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+
+section{margin:48px 0}
+.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.section-title h2{margin:0;font-size:18px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+/* Services list */
+.services{display:flex;flex-direction:column;gap:12px}
+.service{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:12px;background:var(--glass)}
+.service .icon{width:44px;height:44px;border-radius:10px;background:white;display:grid;place-items:center;font-weight:700;box-shadow:0 6px 18px rgba(16,24,40,0.03)}
+.service h4{margin:0 0 4px}
+.service p{margin:0;color:var(--muted);font-size:14px}
+
+/* About */
+.about{display:flex;gap:18px;align-items:center}
+.avatar{width:160px;height:160px;border-radius:18px;background:linear-gradient(135deg,#f3f4f6,#e5e7eb);display:grid;place-items:center;font-size:28px;font-weight:700;color:var(--muted)}
+
+/* Contact form */
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:12px;border-radius:10px;border:1px solid #e6e7eb;font-size:14px}
+button[type="submit"]{padding:12px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700}
+
+footer{max-width:var(--container);margin:36px auto 80px;padding:18px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;}
+  .portfolio{grid-template-columns:repeat(2,1fr)}
+  .grid-2{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+  nav{display:none}
+  header{padding:12px}
+  .portfolio{grid-template-columns:1fr}
+  .avatar{width:120px;height:120px}
+}
+
+  </style>
 </head>
 <body>
-    <h1>Jerico Guanizo</h1>
-    <h2>Summary</h2>
-    <ul>
-        <li>Detail-oriented and highly organized professional with a strong background in project management and team leadership.</li>
-        <li>Proven ability to manage multiple projects simultaneously while maintaining high standards of quality and efficiency.</li>
-        <li>Excellent communication and interpersonal skills, with a track record of building strong relationships with clients and team members.</li>
-    </ul>
-    <h2>Education</h2>
-    <ol>
-        <li>Bachelor of Science in Information Technology</li>
-        <li>Post Web development</li>
-    </ol>
-    <h2>Work Experience</h2>
-    <h3>TaskUs - Shopify Support Advisor (October 2024- Current)</h3>
-    <h2>Skills</h2>
-<ul>
-        <li>Project Management</li>
-        <li>Team Leadership</li>
-        <li>Communication</li>
-        <li>Problem-Solving</li>
-        <li>time management</li>  
-</ul>
-</body>
-<a href="https://www.linkedin.com/in/jerico-gua%C3%B1izo-58432b243/">linkedin</a>
-<a href="contact.html">Contact</a>
-<a href="hobbies.html">Hobbies</a>
- <footer>
-    <p>© 2025 Jerico Guanizo</p>
-  </footer>
+  <header>
+    <div class="brand">
+      <div class="logo">JG</div>
+      <div>
+        <div style="font-weight:700">Jerico Shopify Support</div>
+        <div style="font-size:12px;color:var(--muted)">Store design • SEO • Automation • Support</div>
+      </div>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </header>  <main>
+    <section id="home" class="hero">
+      <div class="hero-card">
+        <h1>Hi — I'm Jerico. I build Shopify stores that convert.</h1>
+        <p class="lead">Minimal, performant, and merchant-friendly Shopify store designs. I pair UX-led design with SEO and automation to deliver measurable results.</p>
+        <div class="meta">
+          <div class="chip">7+ years BPO</div>
+          <div class="chip">Customer Service</div>
+          <div class="chip">Design • SEO • Automation</div>
+          <div class="chip">Support & Growth</div>
+        </div><section style="margin-top:22px">
+      <h3 style="margin:0 0 10px">Featured projects</h3>
+      <div class="portfolio" aria-hidden="false">
+        <article class="card">
+          <img src="/html/Images/8469884.jpg" alt="Modern apparel store" style="height:96px;border-radius:8px;object-fit:cover" />
+          <h3>Modern apparel store</h3>
+          <p>Custom theme edits, product page optimization, responsive layout.</p>
+        </article>
+        <article class="card">
+          <img src="/html/Images/top-view-tools-marketing.jpg" alt="SEO for organic growth" style="height:96px;border-radius:8px;object-fit:cover" />
+          <h3>SEO for organic growth</h3>
+          <p>Technical SEO audit, schema, content strategy — +42% organic traffic.</p>
+        </article>
+        <article class="card">
+          <img src="/html/Images/photovoltaics-factory-worker-uses-tablet-inspect-solar-plant-close-up.jpg" alt="Checkout & Fulfillment Automation" style="height:96px;border-radius:8px;object-fit:cover" />
+          <h3>Checkout & Fulfillment Automation</h3>
+          <p>Flows that reduce manual work by automating order tags, notifications.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <aside style="padding:20px;border-radius:14px;background:linear-gradient(180deg,#ffffff,#fbfbfb);height:100%">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-weight:700">Let's work together</div>
+      <div style="color:var(--muted);font-size:14px">Available for freelance & contract work. I typically handle end-to-end store builds, optimizations, and ongoing growth support.</div>
+      <a href="#contact" class="cta" style="width:100%;display:inline-block;text-align:center;margin-top:8px">Get in touch</a>
+
+      <div style="margin-top:18px;display:grid;gap:8px">
+        <a href="#services">Services</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section id="about">
+  <div class="section-title"><h2>About</h2><div style="color:var(--muted);font-size:13px">Minimal • Efficient • Measurable</div></div>
+  <div class="about grid-2">
+    <div>
+      <img src="/html/Images/RemoveBG.png" alt="JG Avatar" class="avatar" style="width:160px;height:160px;border-radius:18px;object-fit:cover" />
+    </div>
+    <div>
+      <p style="margin-top:0">I'm Jerico — known professionally as <strong>JG Shopify Support</strong>. I have experience across Shopify store design, SEO, customer support, and automation. My background in BPO and e-commerce helps me bridge merchant needs with practical technical solutions.</p>
+      <ul style="color:var(--muted)">
+        <li>End-to-end Shopify store builds (theme, product, checkout)</li>
+        <li>SEO: Technical audits, on-page, schema, content strategy</li>
+        <li>Automation: Flows, tags, order routing, fulfillment optimizations</li>
+        <li>Customer support processes and documentation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title"><h2>Services</h2><div style="color:var(--muted);font-size:13px">Select a service to view details</div></div>
+  <div class="services">
+    <div class="service">
+      <div class="icon">🛍️</div>
+      <div>
+        <h4>Shopify Store Design</h4>
+        <p>Clean, conversion-focused themes with mobile-first UX, fast performance, and easy merchant editing.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon">🔍</div>
+      <div>
+        <h4>SEO & Content Strategy</h4>
+        <p>Technical audits, on-page work, metadata, schema, and a content plan that lifts organic traffic.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon">⚙️</div>
+      <div>
+        <h4>Automation & Flows</h4>
+        <p>Automations to reduce manual tasks: order tags, fulfillment workflows, email & SMS triggers.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon">💬</div>
+      <div>
+        <h4>Customer Support Systems</h4>
+        <p>Support playbooks, ticket routing, and training materials informed by BPO best practices.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="icon">📈</div>
+      <div>
+        <h4>Digital Marketing</h4>
+        <p>Strategic campaigns (ads, email, SMS) and CRO that tie marketing to real revenue metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="section-title"><h2>Portfolio</h2><div style="color:var(--muted);font-size:13px">Selected work — store builds, SEO wins, and automation projects</div></div>
+  <div class="portfolio">
+    <article class="card">
+      <img src="/html/Images/5450165.jpg" alt="Apparel brand redesign" style="height:96px;border-radius:8px;object-fit:cover" />
+      <h3>Apparel brand — Full redesign</h3>
+      <p>Theme customization, product templates, speed optimization, and A/B-tested CTA layouts.</p>
+    </article>
+    <article class="card">
+      <img src="/html/Images/female-blogger-streaming-make-up-brushes-online-with-laptop.jpg" alt="Beauty retailer SEO" style="height:96px;border-radius:8px;object-fit:cover" />
+      <h3>Beauty retailer — SEO lift</h3>
+      <p>Technical SEO fixes and content plan that increased organic sessions by 42% in 4 months.</p>
+    </article>
+    <article class="card">
+      <img src="/html/Images/6254748.jpg" alt="Subscription box automation" style="height:96px;border-radius:8px;object-fit:cover" />
+      <h3>Subscription Box — Automation</h3>
+      <p>Automated tagging and fulfillment routing to improve operations and reduce manual errors.</p>
+    </article>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title"><h2>Contact</h2><div style="color:var(--muted);font-size:13px">Tell me about your project — I reply within 24–48 hours</div></div>
+  <div class="grid-2">
+    <div>
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" rows="6" placeholder="Tell me about your project"></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="padding:14px;border-radius:12px;background:var(--glass)">
+        <strong>Email</strong>
+        <div style="color:var(--muted)">jerico.guanizo01@shopify.com</div>
+      </div>
+      <div style="padding:14px;border-radius:12px;background:var(--glass)">
+        <strong>Availability</strong>
+        <div style="color:var(--muted)">Freelance / Contract — Open</div>
+      </div>
+      <div style="padding:14px;border-radius:12px;background:var(--glass)">
+        <strong>Rates</strong>
+        <div style="color:var(--muted)">Project-based — Let's discuss</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div>© <strong>JG Shopify Support</strong> — Built with minimalism in mind</div>
+    <div style="font-size:13px;color:var(--muted)">Made by Jerico • <a href="#contact">Hire me</a></div>
+  </footer>  <script>
+    // Smooth scrolling for in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}
+      });
+    });
+  </script></body>
 </html>
